@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Houd | My Music</title>
+    <link rel="stylesheet" href="ShravansPortfolio.css" />
+  </head>
+  <body>
+    <!-- <header class="hero">
+      <h1>My Music</h1>
+      <p>Soul • Strings • Stories</p>
+      <a href="#videos" class="btn">Watch My Performances</a>
+    </header> -->
+
+    <nav id="Navbar">
+      <button onclick="window.location.href = 'ShravansPortfolio.html#Navbar'">
+        Home
+      </button>
+      <button>My Music</button>
+      <button onclick="window.location.href = 'vision.html'">Vision</button>
+    </nav>
+
+    <section id="aboutMusic" class="section">
+      <h2>About My Music</h2>
+      <p>
+        Music isn't just sound for me — it's a language I use to express
+        everything that can't be said directly. I experiment with guitar, flute,
+        keyboard, and vocals to create textures and moods that feel personal and
+        raw.
+        <br /><br />
+        Below are some performances, random jams, and experimental pieces — a
+        small window into the melodies I keep discovering.
+      </p>
+    </section>
+
+    <section id="videos" class="section">
+      <h2>Featured Performances</h2>
+
+      <div
+        class="grid"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 30px;
+        "
+      >
+        <div class="card" style="padding: 0; overflow: hidden">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/VIDEO_ID_1"
+            title="Random Guitar Jam"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <div style="padding: 20px">
+            <h3>Random Jam #1</h3>
+            <p>
+              A messy, emotional jam where I just followed the vibe instead of
+              theory.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden">
+          <video
+            width="100%"
+            height="300"
+            src="Assets/InShot_20250918_150333091.mp4"
+            title="Flute Melody Drift"
+            frameborder="0"
+            allowfullscreen
+            controls
+          ></video>
+          <div style="padding: 20px">
+            <h3>Flute Drift</h3>
+            <p>A soft melodic drift recorded in one take.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden">
+          <video
+            width="100%"
+            height="300"
+            src="Assets/VID20250420004350.mp4"
+            title="Keyboard Atmosphere"
+            frameborder="0"
+            allowfullscreen
+            controls
+          ></video>
+          <div style="padding: 20px">
+            <h3>Atmospheric Keys</h3>
+            <p>
+              A random atmospheric progression I built layering simple patterns.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/VIDEO_ID_4"
+            title="Vocal Experiment"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <div style="padding: 20px">
+            <h3>Vocal Experiments</h3>
+            <p>
+              Trying out vibrato, slides, and some rough takes just for fun.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: bangarwarshravan@gmail.com</p>
+      <p>Instagram: instagram.com/shravan0247</p>
+    </section>
+  </body>
+</html>

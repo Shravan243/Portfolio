@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* width: fit-content; */
+}
+
+.loginBox {
+  background: #020617;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox input,
+.loginBox button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #020617;
+}
+.DashButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.DashButtons a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.DButtons {
+  border: none;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.DButtons:hover {
+  box-shadow: 0 0 5px #fd8383;
+  background-color: #fd8383;
+  transform: translateY(-2px);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: #020617;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.chart-card {
+  grid-column: span 3;
+  height: 450px;
+  background: #020617;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.chart-card canvas {
+  width: 100%;
+  height: 100%;
+}
+#activityChart {
+  max-height: 80%;
+}

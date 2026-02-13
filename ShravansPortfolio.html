@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shravan | Portfolio</title>
+    <link rel="stylesheet" href="ShravansPortfolio.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Shravan Bangarwar</h1>
+      <p>Frontend Developer| JavaScript | Building interactive web apps</p>
+      <!-- <a href="#Navbar" class="btn">View My Work</a> -->
+    </header>
+
+    <section id="MainWindow">
+      <nav id="Navbar">
+        <a>Programming</a>
+        <a onclick="window.location.href = 'MyMusic.html'"> My Music </a>
+        <a href="#" class="dashboardButton" onclick="goToDashboard()"
+          >Dashboard</a
+        >
+        <div class="dropdown">
+          <button id="gamesButton">JavaScript Mini Projects</button>
+          <div id="NavbarGames">
+            <button
+              onclick="window.location.href = 'Basic Projects/TICtacTOE.html'"
+            >
+              Tic tac toe
+            </button>
+
+            <button
+              onclick="
+                window.location.href = 'Basic Projects/StonePaperScissor.html'
+              "
+            >
+              Stone paper scissor
+            </button>
+
+            <button
+              onclick="window.location.href = 'Basic Projects/MemoryGame.html'"
+            >
+              Memory game
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          I’m a BCA student and frontend developer who enjoys building
+          interactive and logical web applications using HTML, CSS, and
+          JavaScript. I also have a strong background in programming languages
+          like C, C++, Java, and Python. Music and chess shape my creativity and
+          analytical thinking, which I bring into my development work.
+        </p>
+      </section>
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div>
+          <h4>Frontend: HTML, CSS, JavaScript</h4>
+          <h4>Programming: C, C++, Java, Python</h4>
+          <h4>Tools: Git, GitHub, VS Code</h4>
+        </div>
+      </section>
+      <!-- project section -->
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="grid static" id="projectGrid">
+          <div class="card" onclick="window.location.href = 'Cloneplay.html'">
+            <h3>ClonePlay</h3>
+            <p>
+              Web app that clones YouTube playlists using JavaScript and DOM
+              manipulation
+            </p>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          </div>
+
+          <div class="card" onclick="window.location.href = 'calculator.html'">
+            <h3>Simple Calculator</h3>
+            <p>
+              A basic calculator built to practice JavaScript logic and event
+              handling
+            </p>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          </div>
+
+          <div class="card">
+            <h3>SaaS Dashboard</h3>
+            <p>
+              A dashboard built with JavaScript to manage SaaS data visually
+            </p>
+          </div>
+          <div class="card" id="MoreProjects">
+            <h3>More projects</h3>
+            <p>
+              A collection of small JavaScript projects and practice programs
+            </p>
+          </div>
+        </div>
+        <div id="changeCard">
+          <h2>
+            <button id="prevView"><</button> Didn't like the cards view? change
+            it!
+            <button id="nextView">></button>
+          </h2>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: bangarwarshravan@gmail.com</p>
+        <a
+          href="https://github.com/Shravan243"
+          style="color: white; text-decoration: none"
+          >GitHub: https://github.com/Shravan243</a
+        >
+      </section>
+
+      <div
+        id="projectContainer"
+        style="width: 100%; height: 600px; display: none"
+      >
+        <iframe
+          id="projectFrame"
+          src=""
+          style="width: 100%; height: 100%; border: none"
+        ></iframe>
+      </div>
+
+      <script src="ShravansPortfolio.js"></script>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClonePlay</title>
+    <link rel="stylesheet" href="Cloneplay.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>ClonePlay</h1>
+      <p class="subtext">
+        Clone YouTube playlists from one account to another instantly.
+      </p>
+
+      <div class="feature-box">
+        <h2>Features</h2>
+        <ul>
+          <li>Sleek, modern interface</li>
+          <li>Fast playlist fetching</li>
+          <li>Cross-platform compatible</li>
+          <li>Stores your links securely</li>
+          <li>Smart playlist duplication</li>
+        </ul>
+      </div>
+
+      <div class="input-group">
+        <label>Paste playlist URL:</label>
+        <input type="text" id="url" placeholder="https://youtube.com/..." />
+        <button id="fetch">Submit</button>
+        <button id="cloneBtn">Clone</button>
+      </div>
+
+      <button id="loginBtn" onclick="handleSignIn()">Login with Google</button>
+
+      <div class="saved-links-box" id="showsavedlinks">
+        <button id="showlinks">Show Saved Links</button>
+      </div>
+
+      <div class="feedback-box">
+        <label>Leave feedback: <button id="FeedbackSubmit">Send</button></label>
+        <textarea id="feedback" rows="4"></textarea>
+      </div>
+
+      <p class="footer-note">© 2025 Cloneplay. All rights reserved.</p>
+    </div>
+
+    <div id="cpAlert" class="cp-alert hidden">
+      <div class="cp-alert-box">
+        <h3>ClonePlay</h3>
+        <input
+          id="cpAlertInput"
+          type="text"
+          class="hidden"
+          placeholder="How did you like my project?"
+        />
+        <p id="cpAlertMsg">Link submitted succesfully!</p>
+        <button id="cpAlertOk">OK</button>
+      </div>
+    </div>
+    <script src="https://accounts.google.com/gsi/client"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="Cloneplay.js"></script>
+    <script>
+      gapi.load("client:auth2", initClient);
+    </script>
+  </body>
+</html>

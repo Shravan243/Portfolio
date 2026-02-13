@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body onload="checkAuth()">
+    <header class="topbar">
+      <h2>My Portfolio Dashboard</h2>
+      <div class="DashButtons">
+        <a href="../ShravansPortfolio.html"
+          ><button class="DButtons">Portfolio</button></a
+        >
+        <button class="DButtons" onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <div>Projects: <span id="projectCount"></span></div>
+      <div>Mini Games: <span id="gameCount"></span></div>
+      <div>Skills: <span id="skillCount"></span></div>
+
+      <div class="card chart-card">
+        <h3>Activity Overview</h3>
+        <canvas id="activityChart"></canvas>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

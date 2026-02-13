@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>This is a live countdown display</title>
+    <link rel="stylesheet" href="StonePaperScissor.css" />
+  </head>
+  <body>
+    <div class="Screen">
+      <div id="ScoreBoard">
+        <div>Score</div>
+        <div style="display: flex" class="Scores">
+          <div style="font-size: x-large" id="UserScore">0</div>
+          <div style="font-size: x-large" id="PcScore">0</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row" class="ChoiceDisplay">
+        <div id="Display"></div>
+        <div id="pcDisplay"></div>
+      </div>
+      <div>
+        <button class="Buttons" id="stone">Stone</button>
+        <button class="Buttons" id="paper">Paper</button>
+        <button class="Buttons" id="scissor">Scissor</button>
+      </div>
+      <button id="reset">Reset</button>
+      <div id="History"></div>
+    </div>
+
+    <script src="StonePaperScissor.js"></script>
+  </body>
+</html>
