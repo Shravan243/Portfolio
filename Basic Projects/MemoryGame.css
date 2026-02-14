@@ -8,16 +8,20 @@ body {
   margin-bottom: 10px;
 }
 .Container {
-  /* margin-top: 20px; */
   perspective: 1000px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  max-width: 95vw;
+  justify-content: center;
 }
 .Card {
   border-radius: 8px;
   height: 190px;
   width: 140px;
+  max-width: 22vw;
+  max-height: 30vw;
+
   transform-style: preserve-3d;
   position: relative;
   transition: transform 1000ms;
@@ -86,4 +90,59 @@ body {
 #Reset:hover {
   background-color: bisque;
   transform: scale(1.03);
+}
+/* Tablet */
+
+@media (max-width: 900px) {
+  .Container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .Card {
+    width: 110px;
+    height: 150px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .Container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Card {
+    width: 90px;
+    height: 120px;
+  }
+
+  .timerBox {
+    width: 80px;
+    height: 35px;
+  }
+
+  #Reset {
+    position: static;
+    margin-left: 10px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 400px) {
+  .Container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .Card {
+    width: 70px;
+    height: 95px;
+  }
 }

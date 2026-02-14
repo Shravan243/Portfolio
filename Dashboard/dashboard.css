@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   /* width: fit-content; */
 }
 
@@ -17,7 +17,8 @@ body {
   background: #020617;
   padding: 2rem;
   border-radius: 8px;
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,4 +91,87 @@ body {
 }
 #activityChart {
   max-height: 80%;
+}
+/* Tablet */
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .auth {
+    padding: 15px;
+    /* align-items: flex-start; */
+  }
+
+  .loginBox {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .loginBox input,
+  .loginBox button {
+    padding: 0.8rem;
+    font-size: 16px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    height: 300px;
+  }
+}
+/* Tablet */
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .DashButtons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    height: 300px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 400px) {
+  .topbar h2 {
+    font-size: 18px;
+  }
+
+  .DButtons {
+    height: 35px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .chart-card {
+    height: 250px;
+  }
 }

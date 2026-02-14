@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>This is a form validator</title>
+    <link rel="stylesheet " href="FormValidator.css" />
+  </head>
+  <body>
+    <div id="form">
+      <form id="InnerForm">
+        <label
+          >Enter your username
+          <input type="text" id="User" placeholder="Username" />
+        </label>
+        <label>
+          Enter your password
+          <div class="passWrapper">
+            <input type="password" id="Password" placeholder="Password" />
+            <input type="checkbox" id="ShowPass" />
+          </div>
+        </label>
+      </form>
+      <button id="Validate">Login</button>
+      <button id="SignIn">Sign Up</button>
+    </div>
+    <script src="FormValidator.js"></script>
+  </body>
+</html>

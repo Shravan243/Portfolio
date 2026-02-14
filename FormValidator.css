@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: blanchedalmond;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: whitesmoke;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px;
+  font-weight: 700;
+}
+#InnerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: large;
+}
+#form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+#form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  font-size: 16px;
+  width: 100%;
+}
+.passWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passWrapper input[type="password"] {
+  flex: 1;
+}
+
+#ShowPass {
+  flex: 0;
+}
+
+#Validate {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+#Validate:hover {
+  background-color: crimson;
+  transform: scale(1.03);
+}
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    align-items: center;
+  }
+
+  #form {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 20px;
+    gap: 12px;
+  }
+}
+/* 
+@media (max-width: 480px) {
+  #form {
+    width: 60%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+    width: 90%;
+  }
+} */

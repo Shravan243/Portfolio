@@ -15,13 +15,13 @@
 
     <section id="MainWindow">
       <nav id="Navbar">
-        <a>Programming</a>
+        <a href="#projects">Projects</a>
         <a onclick="window.location.href = 'MyMusic.html'"> My Music </a>
         <a href="#" class="dashboardButton" onclick="goToDashboard()"
           >Dashboard</a
         >
         <div class="dropdown">
-          <button id="gamesButton">JavaScript Mini Projects</button>
+          <a id="gamesButton">Mini Projects</a>
           <div id="NavbarGames">
             <button
               onclick="window.location.href = 'Basic Projects/TICtacTOE.html'"
@@ -86,25 +86,37 @@
             <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
           </div>
 
-          <div class="card">
+          <div
+            class="card"
+            onclick="window.location.href = 'Dashboard/Login.html'"
+          >
             <h3>SaaS Dashboard</h3>
             <p>
               A dashboard built with JavaScript to manage SaaS data visually
             </p>
+            <p><strong>Tech:</strong>HTML,CSS,JavaScript</p>
           </div>
-          <div class="card" id="MoreProjects">
-            <h3>More projects</h3>
+          <div
+            class="card"
+            id="MoreProjects"
+            onclick="window.location.href = 'FormValidator.html'"
+          >
+            <h3>Form validator</h3>
             <p>
-              A collection of small JavaScript projects and practice programs
+              A real-time form validation engine that scans user input, detects
+              invalid data, and prevents submission until all fields pass the
+              checks.
             </p>
+            <p><strong>Tech:</strong>HTML,CSS,JavaScript</p>
           </div>
         </div>
+        <!-- this is changecar plcae -->
         <div id="changeCard">
-          <h2>
-            <button id="prevView"><</button> Didn't like the cards view? change
-            it!
-            <button id="nextView">></button>
-          </h2>
+          <button id="prevView"><</button>
+          <!-- <span class="CardSpan"> -->
+          <h2>Didn't like the cards view? change it!</h2>
+          <!-- </span> -->
+          <button id="nextView">></button>
         </div>
       </section>
 

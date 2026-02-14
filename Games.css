@@ -1,9 +1,0 @@
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-a {
-  height: 60px;
-  width: fit-content;
-}

@@ -15,7 +15,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-#Display {
+/* #Display {
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
@@ -27,7 +27,8 @@ body {
   border: 2px solid black;
   border-radius: 8px;
   margin-bottom: 10px;
-}
+} */
+#Display,
 #pcDisplay {
   background-color: antiquewhite;
   display: flex;
@@ -40,6 +41,8 @@ body {
   border: 2px solid black;
   border-radius: 8px;
   margin-bottom: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 #ScoreBoard {
   height: 50px;
@@ -63,6 +66,8 @@ body {
 button {
   height: 50px;
   width: 100px;
+  max-width: 25vw;
+
   font-size: large;
   font-weight: bolder;
   border-radius: 8px;
@@ -86,4 +91,77 @@ button:hover {
   font-weight: bolder;
   font-size: large;
   white-space: pre-line;
+}
+/* Tablet */
+
+@media (max-width: 768px) {
+  #Display,
+  #pcDisplay {
+    width: 150px;
+    height: 80px;
+    font-size: 22px;
+  }
+
+  button {
+    width: 90px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .ChoiceDisplay {
+    grid-template-columns: 1fr;
+  }
+
+  #Display,
+  #pcDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    font-size: 18px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  button {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    margin: 3px;
+  }
+
+  #ScoreBoard {
+    width: 80px;
+    height: 45px;
+  }
+
+  #History {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 320px) {
+  button {
+    width: 70px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  #Display,
+  #pcDisplay {
+    font-size: 16px;
+  }
 }
