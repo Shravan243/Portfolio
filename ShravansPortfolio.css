@@ -178,13 +178,14 @@ header.hero {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
+  left: auto;
   min-width: 200px;
   padding: 8px;
   gap: 30px;
   z-index: 1000;
   border-radius: 18px;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 #NavbarGames button {
@@ -220,7 +221,8 @@ header.hero {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
+    left: auto;
     /* display: flex; */
     flex-direction: column;
     gap: 5px;

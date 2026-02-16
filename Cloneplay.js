@@ -13,13 +13,13 @@ let cloneContext = {
   sourcePlaylistId: null,
   title: null,
 };
+const CloseCpAlert = document.getElementById("cpAlertOk");
+CloseCpAlert.onclick = closeCpAlert;
 
 //custom alertBox
 function showCpAlert(msg) {
   document.getElementById("cpAlertMsg").textContent = msg;
   document.getElementById("cpAlert").classList.remove("hidden");
-  const CloseCpAlert = document.getElementById("cpAlertOk");
-  CloseCpAlert.onclick = closeCpAlert;
 }
 function closeCpAlert() {
   document.getElementById("cpAlert").classList.add("hidden");
@@ -62,8 +62,8 @@ function handleSignIn() {
       scope: "https://www.googleapis.com/auth/youtube",
       callback: (resp) => {
         gapi.client.setToken({ access_token: resp.access_token });
-        startCloning();
-        // showCpAlert("Signed in successfully");
+        // startCloning();
+        showCpAlert("Signed in successfully");
       },
     });
   }
@@ -76,6 +76,10 @@ function extractPlaylistID(url) {
 }
 //new palylist name input taken here
 cloneBtn.addEventListener("click", () => {
+  if (!gapi.client.getToken()) {
+    showCpAlert("Please sign in to clone the playlist");
+    return;
+  }
   const url = urlInput.value.trim();
   const id = extractPlaylistID(url);
 
@@ -84,15 +88,15 @@ cloneBtn.addEventListener("click", () => {
   cpPrompt("Enter title of the new playlist", (title) => {
     cloneContext.sourcePlaylistId = id;
     cloneContext.title = title || "Clone Playlist";
-    handleSignIn();
+    console.log("Cloning now");
+    startCloning();
   });
 });
 
 //cloning here
 async function startCloning() {
-  const { sourcePlaylistId, title } = cloneContext;
-
   showCpAlert("Cloning playlist...");
+  const { sourcePlaylistId, title } = cloneContext;
 
   const videos = await getVideos(sourcePlaylistId);
   const newPlaylistId = await createPlaylist(title);
