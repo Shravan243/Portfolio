@@ -61,3 +61,28 @@ body {
   font-family: "Digital7";
   src: url("digital-7.ttf") format("truetype");
 }
+@media (max-width: 480px) {
+  .Container {
+    width: 70%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .Container h1 {
+    font-size: 30px;
+  }
+
+  .Display {
+    height: 50px;
+    font-size: 32px;
+  }
+
+  .button {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .NumPad {
+    gap: 6px;
+  }
+}
