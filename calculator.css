@@ -83,6 +83,7 @@ body {
   }
 
   .NumPad {
+    width: 100%
     gap: 6px;
   }
 }
